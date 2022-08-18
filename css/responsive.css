@@ -1,0 +1,247 @@
+@media (max-width: 768px) {
+
+  /* common */
+  .w_header {display: none !important;;}
+  .m_header {display: block !important;}
+  .container {
+    width: 100%;
+  }
+  .flex {display: flex;}
+  .flex_ac {display: flex;align-items:center;}
+  .flex_jsb {display: flex;justify-content:space-between;}
+  .flex_acjsb {display: flex;align-items:center;justify-content:space-between;}
+  .flex_acjc {display: flex;align-items:center;justify-content:center;}
+
+  /* header */
+  .m_header {
+    border-bottom: 1px solid #ddd;
+  }
+  .container {
+    height: 70px;
+  }
+  .m_header .logo {
+    width: 140px;
+    margin: 8px 0 0 20px;
+  }
+  .menu_btn {
+    margin-top: 10px;
+    position: absolute;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .menu_btn > div {
+    width: 25px;
+    height: 2px;
+    margin-bottom: 6px;
+    background-color: #454545;
+    transition: 0.3s;
+  }
+  .menu_btn > div:last-child {
+    margin-bottom: 0;
+  }
+  .menu_btn.active > div:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
+  }
+  .menu_btn.active > div:nth-child(2) {
+    display: none;
+  }
+  .menu_btn.active > div:nth-child(3) {
+    position: relative;
+    top: -8px;
+    transform:translateY(5px) rotate(45deg);
+  }
+  .mh_menu {
+    position: fixed;
+    top: 70px;
+    left: auto;
+    bottom: 0;
+    width: 300px;
+    right: -320px;
+    height: 100vh;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: -3px 0 8px rgba(0,0,0,0.1);
+    transition:0.45s;
+  }
+  .mh_menu.open {
+    right: 0;
+  }
+  .mbtn_close {
+    display: none !important;
+  }
+  .mh_nav {
+    /* display: block; */
+    position: relative;
+    height: calc(100vh - 70px);
+    box-sizing: border-box;
+  }
+  .mn_left {
+    width: 45%;
+    background-color: #c5dbdf;
+    padding: 20px 0 0 28px;
+  }
+  .mn_left ul > li {
+    line-height: 2.3em;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .mn_left ul > li.current {
+    font-weight: 700;
+    color: #1976D2;
+  }
+  .mn_right {
+    width: 55%;
+    position: relative;
+    background-color: #e5eef0;
+  }
+  .mn_right > ul > li {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: 0.7s;   
+  }
+  .mn_right > ul > li.current {
+    opacity: 1;
+    left: 0;
+  }
+  .submenu {
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .submenu li {
+    position: relative;
+  }
+  .submenu li a {
+    font-size: 16px;
+    line-height: 2.4em;
+  }
+  .r_angle {
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+  }
+  
+  /* =============== banner =============== */
+  .banner {
+    margin-top: 70px;
+    /* height: 100%; */
+    width: 100%;
+  }
+  .slider .slide {
+    height: calc(100vh - 70px);
+  }
+  .maincopy {
+    width: 100%;
+    padding: 20px;
+  }
+  .slide h2 {
+    font-size: 24px;
+    width: 100%;
+    white-space: unset;
+  }
+
+  /* =============== board =============== */
+  .board_cont {
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+  .cs {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .m_news {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .notice_list ul li a {
+    font-size: 14px;
+  }
+  .m_column {
+    width: 100%;
+  }
+
+  /* =============== experience =============== */
+  /* main_board section 윗쪽으로 배치됨 왜???? */
+  .experience {
+    display: none;
+  }
+  .exp_cont {
+    padding: 20px;
+    height: 100%;
+  }
+  .exp_head h2 {
+    font-size: 30px;
+  }
+  .exp_head p {
+    font-size: 16px;
+  }
+  .exform_wrap {
+    flex-direction: column;
+  }
+  .exform_wrap > div {
+    width: 100%;
+  }
+  .input_wrap input {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 12px;
+    font-size:0.9rem;
+  }
+  .exform_right textarea {
+    padding: 12px 15px;
+  }
+
+  /* popup */
+  .pop_container {
+    width: 90%;
+    height: 90%;
+  }
+  .popup_close {
+    right: 20px;
+  }
+  .pop_title {
+    display: block;
+    padding: 20px 60px 20px 16px;
+    line-height: 1.6rem;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  .pop_text {
+    padding: 10px 5px 0 16px;
+    height: 490px;
+  }
+  .pop_text dl dt {
+    font-size: 1.1em;
+  }
+  .pop_text dl dd {
+    font-size: 0.85em;
+    line-height: 1.2em;
+  }
+  .pop_small {
+    font-size: 1em;
+  }
+  .pop_content .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    height: 380px;
+  }
+  
+  
+  
+
+
+
+
+
+
+
+}
