@@ -94,7 +94,7 @@ $(document).ready(function(){
   // });
 
   //개인정보처리방침버튼 클릭 시 팝업
-  $('.popup_privacy').on('click',function(){
+  $('.popup_privacy, .layer_popup').on('click',function(){
     $('html, body').css({'overflow':'hidden'});
     $('.pop_wrap_privacy').fadeIn(200);
   });

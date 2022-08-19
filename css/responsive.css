@@ -5,6 +5,7 @@
   .m_header {display: block !important;}
   .container {
     width: 100%;
+    height: auto;
   }
   .flex {display: flex;}
   .flex_ac {display: flex;align-items:center;}
@@ -16,8 +17,12 @@
   .m_header {
     border-bottom: 1px solid #ddd;
   }
-  .container {
+  .m_header {
     height: 70px;
+  }
+  .mh_intro {
+    display: flex;
+    align-items: center;
   }
   .m_header .logo {
     width: 140px;
@@ -72,6 +77,7 @@
   }
   .mh_nav {
     /* display: block; */
+    display: flex;
     position: relative;
     height: calc(100vh - 70px);
     box-sizing: border-box;
@@ -119,15 +125,17 @@
   .submenu li {
     position: relative;
   }
+  .submenu li::after {
+    content: "\e940";
+    position: absolute;
+    font-family: xeicon;
+    top: 12px;
+    right: 20px;
+    font-size: 12px;
+  }
   .submenu li a {
     font-size: 16px;
     line-height: 2.4em;
-  }
-  .r_angle {
-    font-size: 12px;
-    position: absolute;
-    right: 20px;
-    top: 13px;
   }
   
   /* =============== banner =============== */
@@ -160,6 +168,8 @@
     text-align: center;
     margin-bottom: 40px;
   }
+  .tel {font-size: 44px;}
+  .phone {font-size: 40px;}
   .m_news {
     width: 100%;
     margin-bottom: 20px;
@@ -172,16 +182,12 @@
   }
 
   /* =============== experience =============== */
-  /* main_board section 윗쪽으로 배치됨 왜???? */
-  .experience {
-    display: none;
-  }
   .exp_cont {
     padding: 20px;
     height: 100%;
   }
   .exp_head h2 {
-    font-size: 30px;
+    font-size: 26px;
   }
   .exp_head p {
     font-size: 16px;
@@ -200,12 +206,14 @@
   }
   .exform_right textarea {
     padding: 12px 15px;
+    font-size: 0.9rem;
   }
 
   /* popup */
   .pop_container {
     width: 90%;
     height: 90%;
+    border-radius: 8px;
   }
   .popup_close {
     right: 20px;
@@ -234,8 +242,36 @@
   .pop_content .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     height: 380px;
   }
-  
-  
+
+  /* =============== footer =============== */
+  footer {
+    /* display: none; */
+    min-height: 260px;
+  }
+  .foot_cont {
+    padding: 0 20px;
+  }
+  .f_link ul li {
+    margin-right: 20px;
+  }
+  .popup_privacy {
+    display: none;
+  }
+  .f_link ul li::after {
+    display: none;
+  }
+  .f_link ul li a {
+    font-size: 5;
+  }
+  .comp_info {
+    flex-direction: column;
+  }
+  .comp_info li {
+    font-size: 14px;
+  }
+  .comp_info li::after {
+    display: none;
+  }
   
 
 

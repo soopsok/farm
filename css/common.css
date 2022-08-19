@@ -93,6 +93,9 @@ header {
   /* overflow: hidden; */
   height: 116px;
 }
+.w_header {
+  border-bottom: 1px solid #ddd;
+}
 .whd_cont h1 {
   float: left;
   margin-top: 15px;
@@ -383,13 +386,13 @@ header {
 	position: absolute;
 	display: none;
 }
-.popup_privacy {
+.layer_popup {
   position: absolute;
-  top:0;
   left: 22px;
-  z-index:9;
-  width: 114px;
-  height: 26px;
+  top: 0px;
+	z-index: 9;
+	width: 114px;
+	height: 24px;
 }
 
 /* checkbox > cecked */
@@ -407,7 +410,7 @@ header {
 .btn_request {
   width: 100%;
   height: 56px;
-  line-height: 56px;
+  /* line-height: 56px; */
   font-size: 22px;
   font-weight: 500;
   color: #fff;
@@ -499,3 +502,78 @@ header {
   padding-bottom: 10px;
 }
 
+/* =============== footer =============== */
+footer {
+  min-height: 200px;
+  background-color: #32425a;
+  padding: 15px 0;
+}
+.foot_cont {}
+.f_link {}
+.f_link ul {
+  display: flex;
+  align-items: center;
+}
+.f_link ul li {
+  position: relative;
+  margin-right: 26px;
+}
+.popup_privacy {
+  position: absolute;
+	top:2px;
+	z-index: 9;
+	height: 24px;
+	cursor: pointer;
+}
+.f_link ul li::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(168, 167, 167);
+  border-radius: 50%;
+  top: 10px;
+  right: -17px;
+}
+.f_link ul li:last-child:after {
+  display: none;
+}
+.f_link ul li a {
+  color: #a6b8c1;
+  font-size: 16px;
+}
+.foot_cont h2 {
+  font-size: 1.5em;
+	font-weight: 700;
+	color: #5c94e2;
+  margin-top: 20px;
+
+}
+.comp_info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comp_info li {
+  margin-right: 20px;
+	font-weight: 300;
+	color: #8694ab;
+	font-size: 15px;
+  position: relative;
+}
+.comp_info li::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background-color: #bbb;
+  right: -12px;
+  top: 7px;
+}
+.comp_info li:last-child:after {
+  display: none;
+}
+.foot_cont > span {
+  color: #bbb;
+  font-weight: 300;
+  font-size: 13px;
+}
